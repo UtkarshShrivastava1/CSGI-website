@@ -96,243 +96,89 @@ const SchoolFooter = () => {
           </div>
         </div>
 
-        {/* Main Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* About Column */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 relative">
-              <span className="border-b-2 border-blue-400 pb-1">About</span>
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  About CSIT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/more/student-affairs?tab=associations"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Students Associations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/more/student-affairs?tab=industry"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Industrial Visit
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/campus/initiatives?tab=swar"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  SWAR
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/more/newsletter"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  News Letter
-                </Link>
-              </li>
-            </ul>
-          </div>
+        {/* Contact Column */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4 relative">
+            <span className="border-b-2 border-blue-400 pb-1">Contact Us</span>
+          </h3>
+          <ul className="space-y-4">
+            <li className="flex items-start group">
+              <a
+                href="https://goo.gl/maps/YourMapLink" // Replace with actual Google Maps link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                aria-label="Visit our location on Google Maps"
+              >
+                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 mt-1 group-hover:bg-blue-800">
+                  <HiLocationMarker className="h-5 w-5 text-blue-300" />
+                </div>
+                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                  Shivaji Nagar, Balod Road Durg, Chhattisgarh 491001
+                </span>
+              </a>
+            </li>
 
-          {/* Academics Column */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 relative">
-              <span className="border-b-2 border-blue-400 pb-1">Academics</span>
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/more/calendar"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Academic Calendar
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/admission/courses-offered"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Courses Offered
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/admission/admission-process"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Admission Processes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/academics/nptel"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  NPTEL
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/academics/nirf"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  NIRF 2024
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li className="flex items-center group">
+              <a
+                href="mailto:registrar@csitdurg.in"
+                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                aria-label="Send email to registrar"
+              >
+                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
+                  <HiMail className="h-5 w-5 text-blue-300" />
+                </div>
+                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                  registrar@csitdurg.in
+                </span>
+              </a>
+            </li>
 
-          {/* Mandatory Information Column */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 relative">
-              <span className="border-b-2 border-blue-400 pb-1">
-                Mandatory Information
-              </span>
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/more/anti-ragging"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Anti-Ragging
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/more/mandatory-disclosure"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  Mandatory Disclosure
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/more/rti"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  RTI
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/campus/initiatives?tab=nss"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  NSS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/funds"
-                  className="text-gray-300 hover:text-blue-300 transition duration-300 inline-block py-1"
-                >
-                  FUNDS & GRANTS
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li className="flex items-center group">
+              <a
+                href="mailto:info@csitdurg.in"
+                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                aria-label="Send email to info"
+              >
+                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
+                  <HiMail className="h-5 w-5 text-blue-300" />
+                </div>
+                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                  info@csitdurg.in
+                </span>
+              </a>
+            </li>
 
-          {/* Contact Column */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 relative">
-              <span className="border-b-2 border-blue-400 pb-1">
-                Contact Us
-              </span>
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start group">
-                <a
-                  href="https://goo.gl/maps/YourMapLink" // Replace with actual Google Maps link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
-                  aria-label="Visit our location on Google Maps"
-                >
-                  <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 mt-1 group-hover:bg-blue-800">
-                    <HiLocationMarker className="h-5 w-5 text-blue-300" />
-                  </div>
-                  <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
-                    Shivaji Nagar, Balod Road Durg, Chhattisgarh 491001
-                  </span>
-                </a>
-              </li>
+            <li className="flex items-center group">
+              <a
+                href="tel:+919826199557"
+                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                aria-label="Call our primary contact number"
+              >
+                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
+                  <HiPhone className="h-5 w-5 text-blue-300" />
+                </div>
+                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                  +91 98261 99557
+                </span>
+              </a>
+            </li>
 
-              <li className="flex items-center group">
-                <a
-                  href="mailto:registrar@csitdurg.in"
-                  className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
-                  aria-label="Send email to registrar"
-                >
-                  <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                    <HiMail className="h-5 w-5 text-blue-300" />
-                  </div>
-                  <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
-                    registrar@csitdurg.in
-                  </span>
-                </a>
-              </li>
-
-              <li className="flex items-center group">
-                <a
-                  href="mailto:info@csitdurg.in"
-                  className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
-                  aria-label="Send email to info"
-                >
-                  <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                    <HiMail className="h-5 w-5 text-blue-300" />
-                  </div>
-                  <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
-                    info@csitdurg.in
-                  </span>
-                </a>
-              </li>
-
-              <li className="flex items-center group">
-                <a
-                  href="tel:+919826199557"
-                  className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
-                  aria-label="Call our primary contact number"
-                >
-                  <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                    <HiPhone className="h-5 w-5 text-blue-300" />
-                  </div>
-                  <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
-                    +91 98261 99557
-                  </span>
-                </a>
-              </li>
-
-              <li className="flex items-center group">
-                <a
-                  href="tel:+918966000102"
-                  className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
-                  aria-label="Call our secondary contact number"
-                >
-                  <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                    <HiPhone className="h-5 w-5 text-blue-300" />
-                  </div>
-                  <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
-                    +91 89660 00102
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <li className="flex items-center group">
+              <a
+                href="tel:+918966000102"
+                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                aria-label="Call our secondary contact number"
+              >
+                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
+                  <HiPhone className="h-5 w-5 text-blue-300" />
+                </div>
+                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                  +91 89660 00102
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 

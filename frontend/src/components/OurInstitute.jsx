@@ -34,23 +34,22 @@ export default function InstitutesSection() {
             </div>
           </div>
         </Link>
-
-        {/* CSIP Card */}
         <Link
           to="http://csipdurg.in/index.php"
           target="_blank"
           rel="noopener noreferrer"
           className="transform transition duration-300 hover:scale-105"
         >
-          <div className="bg-[#00a859] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#00a859]/50 border border-[#00924d] h-full">
+          <div className="bg-[#00a859] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#1e2e69]/50 border border-[#101c3d] h-full">
             <div className="p-6 sm:p-8 flex flex-col items-center text-center space-y-3 sm:space-y-4 h-full">
               <img
-                src={Csip}
+                src={Csit}
                 alt="CSIP Logo"
                 className="w-28 sm:w-36 h-auto object-contain"
               />
               <h3 className="text-lg sm:text-2xl font-semibold text-white">
-                Chhatrapati Shivaji Institute of Pharmacy
+                {" "}
+                Chhatrapati Shivaji Institute of Pharmacy{" "}
               </h3>
               <p className="text-sm sm:text-base text-white leading-relaxed">
                 Premier pharmacy institute in Chhattisgarh, specializing in
@@ -59,6 +58,7 @@ export default function InstitutesSection() {
             </div>
           </div>
         </Link>
+        {/* CSIP Card */}
       </div>
     </div>
   );
