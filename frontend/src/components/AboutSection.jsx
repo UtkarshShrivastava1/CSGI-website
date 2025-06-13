@@ -90,7 +90,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-[#7f1d1d] mb-3 transition-all duration-300 group-hover:translate-x-2">
-                    About CSIT
+                    About CSGI
                   </h3>
                   <p className="text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-800">
                     Established in 1999, CSIT stands as a beacon of excellence
