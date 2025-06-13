@@ -53,17 +53,13 @@ const GallerySection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="relative text-center mb-16">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-[#0d173b]/5"></div>
-          <h2 className="relative inline-block text-3xl md:text-4xl font-bold text-[#0d173b]">
-            Moments <span className="text-[#0d173b]/70">Gallery</span>
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-[#7f1d1d]/5"></div>
+          <h2 className="relative inline-block text-3xl md:text-4xl font-bold text-[#7f1d1d]">
+            Moments <span className="text-[#7f1d1d]/70">Gallery</span>
           </h2>
           <div className="mt-4 flex justify-center">
-            <div className="w-16 h-1 bg-[#0d173b]"></div>
+            <div className="w-16 h-1 bg-[#7f1d1d]"></div>
           </div>
-          <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-sm sm:text-base">
-            Explore our collection of memorable events and activities captured
-            through the lens
-          </p>
         </div>
 
         {/* Swiper Carousel */}
@@ -105,7 +101,7 @@ const GallerySection = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover transition duration-300 hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d173b] via-[#0d173b]/80 to-transparent p-4 sm:p-6">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#7f1d1d] via-[#7f1d1d]/80 to-transparent p-4 sm:p-6">
                     <h3 className="text-white font-semibold text-lg sm:text-xl mb-1">
                       {image.title}
                     </h3>
@@ -120,15 +116,15 @@ const GallerySection = () => {
 
           {/* Navigation Buttons */}
           <button
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 ml-2 sm:ml-4 hover:bg-gray-100"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-2 ml-2 sm:ml-4 transition-colors duration-200 hover:text-[#7f1d1d]"
             onClick={() => swiperRef.current?.slidePrev()}
             aria-label="Previous Slide"
           >
             <svg
-              className="w-6 h-6 text-gray-700"
+              className="w-8 h-8 text-white"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               viewBox="0 0 24 24"
             >
               <path
@@ -140,15 +136,15 @@ const GallerySection = () => {
           </button>
 
           <button
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 mr-2 sm:mr-4 hover:bg-gray-100"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-2 mr-2 sm:mr-4 transition-colors duration-200 hover:text-[#7f1d1d]"
             onClick={() => swiperRef.current?.slideNext()}
             aria-label="Next Slide"
           >
             <svg
-              className="w-6 h-6 text-gray-700"
+              className="w-8 h-8 text-white"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               viewBox="0 0 24 24"
             >
               <path

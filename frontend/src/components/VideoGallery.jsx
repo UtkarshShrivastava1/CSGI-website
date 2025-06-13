@@ -228,18 +228,18 @@ export default function VideoGallery() {
     <section className="relative py-8 sm:py-12 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0d173b] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#7f1d1d] mb-4">
             Video Gallery
           </h2>
-          <div className="w-24 h-1 bg-[#0d173b] mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-[#7f1d1d] mx-auto rounded-full"></div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <button
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeCategory === "all"
-                ? "bg-[#0d173b] text-white"
-                : "bg-gray-100 text-[#0d173b] hover:bg-gray-200"
+                ? "bg-[#7f1d1d] text-white"
+                : "bg-gray-100 text-[#7f1d1d] hover:bg-gray-200"
             }`}
             onClick={() => setActiveCategory("all")}
           >
@@ -248,8 +248,8 @@ export default function VideoGallery() {
           <button
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeCategory === "local"
-                ? "bg-[#0d173b] text-white"
-                : "bg-gray-100 text-[#0d173b] hover:bg-gray-200"
+                ? "bg-[#7f1d1d] text-white"
+                : "bg-gray-100 text-[#7f1d1d] hover:bg-gray-200"
             }`}
             onClick={() => setActiveCategory("local")}
           >
@@ -258,8 +258,8 @@ export default function VideoGallery() {
           <button
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeCategory === "youtube"
-                ? "bg-[#0d173b] text-white"
-                : "bg-gray-100 text-[#0d173b] hover:bg-gray-200"
+                ? "bg-[#7f1d1d] text-white"
+                : "bg-gray-100 text-[#7f1d1d] hover:bg-gray-200"
             }`}
             onClick={() => setActiveCategory("youtube")}
           >
@@ -310,14 +310,14 @@ export default function VideoGallery() {
                       <div className="flex items-center gap-4">
                         <button
                           onClick={togglePlayPause}
-                          className="text-white hover:text-blue-400 transition-colors"
+                          className="text-white hover:text-red-400 transition-colors"
                         >
                           {isPlaying ? <Pause size={24} /> : <Play size={24} />}
                         </button>
                         <div className="flex items-center gap-2">
                           <button
                             onClick={toggleMute}
-                            className="text-white hover:text-blue-400 transition-colors"
+                            className="text-white hover:text-red-400 transition-colors"
                           >
                             {volume === 0 ? (
                               <VolumeX size={20} />
@@ -371,7 +371,7 @@ export default function VideoGallery() {
                   key={idx}
                   className={`flex gap-4 p-2 rounded-lg cursor-pointer transition-all ${
                     activeVideo === video
-                      ? "bg-blue-50 border border-blue-200"
+                      ? "bg-red-50 border border-red-200"
                       : "hover:bg-gray-50"
                   }`}
                   onClick={() => handleVideoSelect(video)}

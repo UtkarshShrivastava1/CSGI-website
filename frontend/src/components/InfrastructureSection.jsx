@@ -13,13 +13,14 @@ const InfrastructureSection = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#0d173b]">
-            Our <span className="text-[#0d173b]">Infrastructure</span>
+          <h2 className="text-4xl font-bold text-[#7f1d1d]">
+            Our <span className="text-[#7f1d1d]">Infrastructure</span>
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
-            Discover our state-of-the-art campus, designed to foster innovation and creativity.
+            Discover our state-of-the-art campus, designed to foster innovation
+            and creativity.
           </p>
-          <div className="w-16 h-1 bg-[#0d173b] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#7f1d1d] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Image Grid */}

@@ -5,7 +5,7 @@ import Csip from "../assets/csip.png";
 export default function InstitutesSection() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10 md:mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#7f1d1d] mb-10 md:mb-12">
         Our Institutes
       </h2>
 
@@ -17,7 +17,7 @@ export default function InstitutesSection() {
           rel="noopener noreferrer"
           className="transform transition duration-300 hover:scale-105"
         >
-          <div className="bg-[#0d173b] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#1e2e69]/50 border border-[#101c3d] h-full">
+          <div className="bg-[#0d173b] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#7f1d1d]/50 border border-[#7f1d1d] h-full">
             <div className="p-6 sm:p-8 flex flex-col items-center text-center space-y-3 sm:space-y-4 h-full">
               <img
                 src={Csit}
@@ -34,16 +34,18 @@ export default function InstitutesSection() {
             </div>
           </div>
         </Link>
+
+        {/* CSIP Card */}
         <Link
           to="http://csipdurg.in/index.php"
           target="_blank"
           rel="noopener noreferrer"
           className="transform transition duration-300 hover:scale-105"
         >
-          <div className="bg-[#00a859] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#1e2e69]/50 border border-[#101c3d] h-full">
+          <div className="bg-[#00a859] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#7f1d1d]/50 border border-[#7f1d1d] h-full">
             <div className="p-6 sm:p-8 flex flex-col items-center text-center space-y-3 sm:space-y-4 h-full">
               <img
-                src={Csit}
+                src={Csip}
                 alt="CSIP Logo"
                 className="w-28 sm:w-36 h-auto object-contain"
               />
@@ -58,7 +60,6 @@ export default function InstitutesSection() {
             </div>
           </div>
         </Link>
-        {/* CSIP Card */}
       </div>
     </div>
   );

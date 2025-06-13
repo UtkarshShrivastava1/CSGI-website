@@ -13,7 +13,7 @@ import Logo from "../assets/csitlogo.png";
 
 const SchoolFooter = () => {
   return (
-    <footer className="bg-red-800 text-white font-sans">
+    <footer className="bg-[#7f1d1d] text-white font-sans">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12">
         {/* Top section with logo and social media */}
@@ -32,13 +32,12 @@ const SchoolFooter = () => {
             </div>
           </div>
 
+          {/* Update social media icons background */}
           <div className="flex space-x-4">
             <Link
               to="/external/instagram"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition duration-300"
               aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <FaInstagram
                 className="h-5 w-5 text-white"
@@ -47,7 +46,7 @@ const SchoolFooter = () => {
             </Link>
             <Link
               to="/external/facebook"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition duration-300"
               aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +58,7 @@ const SchoolFooter = () => {
             </Link>
             <Link
               to="/external/youtube"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition duration-300"
               aria-label="YouTube"
               target="_blank"
               rel="noopener noreferrer"
@@ -71,7 +70,7 @@ const SchoolFooter = () => {
             </Link>
             <Link
               to="/external/linkedin"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition duration-300"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,7 +82,7 @@ const SchoolFooter = () => {
             </Link>
             <Link
               to="/external/twitter"
-              className="bg-blue bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition duration-300"
+              className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition duration-300"
               aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
@@ -96,24 +95,22 @@ const SchoolFooter = () => {
           </div>
         </div>
 
-        {/* Contact Column */}
+        {/* Contact Column - Update border and hover effects */}
         <div>
           <h3 className="text-lg font-semibold mb-4 relative">
-            <span className="border-b-2 border-blue-400 pb-1">Contact Us</span>
+            <span className="border-b-2 border-white pb-1">Contact Us</span>
           </h3>
           <ul className="space-y-4">
             <li className="flex items-start group">
               <a
                 href="https://goo.gl/maps/YourMapLink" // Replace with actual Google Maps link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                className="flex items-start hover:bg-white/10 p-2 rounded-lg transition-all duration-300 w-full"
                 aria-label="Visit our location on Google Maps"
               >
-                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 mt-1 group-hover:bg-blue-800">
-                  <HiLocationMarker className="h-5 w-5 text-blue-300" />
+                <div className="bg-white/10 p-2 rounded-md mr-3 flex-shrink-0 mt-1 group-hover:bg-white/20">
+                  <HiLocationMarker className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                <span className="text-gray-300 text-sm group-hover:text-white transition duration-300">
                   Shivaji Nagar, Balod Road Durg, Chhattisgarh 491001
                 </span>
               </a>
@@ -122,13 +119,13 @@ const SchoolFooter = () => {
             <li className="flex items-center group">
               <a
                 href="mailto:registrar@csitdurg.in"
-                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                className="flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 w-full"
                 aria-label="Send email to registrar"
               >
-                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                  <HiMail className="h-5 w-5 text-blue-300" />
+                <div className="bg-white/10 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-white/20">
+                  <HiMail className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                <span className="text-gray-300 text-sm group-hover:text-white transition duration-300">
                   registrar@csitdurg.in
                 </span>
               </a>
@@ -137,13 +134,13 @@ const SchoolFooter = () => {
             <li className="flex items-center group">
               <a
                 href="mailto:info@csitdurg.in"
-                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                className="flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 w-full"
                 aria-label="Send email to info"
               >
-                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                  <HiMail className="h-5 w-5 text-blue-300" />
+                <div className="bg-white/10 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-white/20">
+                  <HiMail className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                <span className="text-gray-300 text-sm group-hover:text-white transition duration-300">
                   info@csitdurg.in
                 </span>
               </a>
@@ -152,13 +149,13 @@ const SchoolFooter = () => {
             <li className="flex items-center group">
               <a
                 href="tel:+919826199557"
-                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                className="flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 w-full"
                 aria-label="Call our primary contact number"
               >
-                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                  <HiPhone className="h-5 w-5 text-blue-300" />
+                <div className="bg-white/10 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-white/20">
+                  <HiPhone className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                <span className="text-gray-300 text-sm group-hover:text-white transition duration-300">
                   +91 98261 99557
                 </span>
               </a>
@@ -167,13 +164,13 @@ const SchoolFooter = () => {
             <li className="flex items-center group">
               <a
                 href="tel:+918966000102"
-                className="flex items-center hover:bg-blue-900/20 p-2 rounded-lg transition-all duration-300 w-full"
+                className="flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 w-full"
                 aria-label="Call our secondary contact number"
               >
-                <div className="bg-blue-900 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-blue-800">
-                  <HiPhone className="h-5 w-5 text-blue-300" />
+                <div className="bg-white/10 p-2 rounded-md mr-3 flex-shrink-0 group-hover:bg-white/20">
+                  <HiPhone className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-blue-300 transition duration-300">
+                <span className="text-gray-300 text-sm group-hover:text-white transition duration-300">
                   +91 89660 00102
                 </span>
               </a>
@@ -182,8 +179,8 @@ const SchoolFooter = () => {
         </div>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="bg-black bg-opacity-30">
+      {/* Bottom Footer - Update hover colors */}
+      <div className="bg-black/30">
         <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="text-gray-400 mb-2 md:mb-0">
             Copyright © 2025 All rights reserved By CSGI
@@ -191,25 +188,25 @@ const SchoolFooter = () => {
           <div className="flex space-x-8">
             <Link
               to="/privacy-policy"
-              className="text-gray-400 hover:text-gray-200 transition duration-300"
+              className="text-gray-400 hover:text-white transition duration-300"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="text-gray-400 hover:text-gray-200 transition duration-300"
+              className="text-gray-400 hover:text-white transition duration-300"
             >
               Terms & Conditions
             </Link>
             <Link
               to="/sitemap"
-              className="text-gray-400 hover:text-gray-200 transition duration-300"
+              className="text-gray-400 hover:text-white transition duration-300"
             >
               Sitemap
             </Link>
             <Link
               to="/admin-login"
-              className="text-gray-400 hover:text-gray-200 transition duration-300"
+              className="text-gray-400 hover:text-white transition duration-300"
             >
               Admin
             </Link>
@@ -218,7 +215,7 @@ const SchoolFooter = () => {
             Powered by{" "}
             <Link
               to="/external/zager"
-              className="text-blue-400 hover:text-blue-300 transition duration-300"
+              className="text-white/80 hover:text-white transition duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -32,51 +32,56 @@ const Header = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Logo and Title */}
             <div className="flex items-center space-x-4 md:space-x-6">
-              <img
-                src={Logo}
-                alt="CSIT Logo"
-                className="w-24 md:w-40 h-auto rounded-full"
-              />
-              <div className="text-left">
-                <h1 className="text-xl md:text-4xl text-black font-serif">
-                  Chhatrapati Shivaji Group of Institutions
-                </h1>
-                <p className="text-xs md:text-sm text-black">
-                  Shivaji Nagar, Baload Road Durg, Chhattisgarh 491001
-                </p>
-              </div>
+              <Link
+                to="/"
+                className="flex items-center space-x-4 md:space-x-6 hover:opacity-90 transition-opacity"
+              >
+                <img
+                  src={Logo}
+                  alt="CSIT Logo"
+                  className="w-24 md:w-40 h-auto rounded-full"
+                />
+                <div className="text-left">
+                  <h1 className="text-xl md:text-4xl text-black font-serif">
+                    Chhatrapati Shivaji Group of Institutions{" "}
+                  </h1>
+                  <p className="text-xs md:text-sm text-black">
+                    Shivaji Nagar, Baload Road Durg, Chhattisgarh 491001
+                  </p>
+                </div>
+              </Link>
             </div>
 
             {/* Right Side Menu - Modified for better mobile display */}
             <div className="mt-4 md:mt-0 flex items-center space-x-4">
-              {/* Desktop View */}
-              <div className="hidden md:flex items-center gap-17 space-x-15">
+              {/* Images Section - Visible on all devices */}
+              <div className="flex items-center gap-2 md:gap-4 overflow-x-auto pb-2 md:pb-0">
                 {/* Additional Photos */}
-                <div className="flex space-x-3">
+                <div className="flex space-x-2 md:space-x-4">
                   <img
                     src={Image1}
-                    alt="Sample 1"
-                    className="h-13 w-13 rounded-md"
+                    alt="AICTE Logo"
+                    className="h-10 w-10 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
                   <img
                     src={Image2}
-                    alt="Sample 2"
-                    className="h-13 w-13 rounded-md"
+                    alt="IIC Logo"
+                    className="h-10 w-10 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
                   <img
                     src={Image3}
-                    alt="Sample 3"
-                    className="h-13 w-13 rounded-md"
+                    alt="ISO Logo"
+                    className="h-10 w-10 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
                   <img
                     src={Image4}
-                    alt="Sample 4"
-                    className="h-13 w-13 rounded-md"
+                    alt="CSVTU Logo"
+                    className="h-10 w-10 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
                   <img
                     src={Image5}
-                    alt="Sample 5"
-                    className="h-13 w-13 rounded-md"
+                    alt="DataQuest Logo"
+                    className="h-10 w-10 md:h-18 md:w-18 rounded-md object-contain hover:scale-105 transition-transform"
                   />
                 </div>
               </div>

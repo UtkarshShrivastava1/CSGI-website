@@ -11,7 +11,7 @@ const customStyles = `
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
-    background-color: #0d173b;
+    background-color: #7f1d1d;
     opacity: 0.5;
     transition: all 0.3s ease;
   }
@@ -80,7 +80,7 @@ const MediaCoverage = () => {
   };
 
   return (
-    <section className="relative py-20 sm:py-28 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative py-20 sm:py-28 bg-gradient-to-b from-white via-red-50 to-white overflow-hidden">
       <style>{customStyles}</style>
 
       {showModal && (
@@ -98,10 +98,10 @@ const MediaCoverage = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative">
         <div className="text-center mb-12 sm:mb-20">
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#0d173b] mb-4">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#7f1d1d] mb-4">
             Media Coverage
           </h2>
-          <div className="w-16 sm:w-24 h-1 bg-[#0d173b] mx-auto rounded-full"></div>
+          <div className="w-16 sm:w-24 h-1 bg-[#7f1d1d] mx-auto rounded-full"></div>
           <p className="text-gray-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed mt-6">
             Discover our institution's journey through media highlights and
             achievements
@@ -136,7 +136,7 @@ const MediaCoverage = () => {
                       className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105"
                       style={{ backgroundImage: `url('${item.image}')` }}
                     ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d173b] via-[#0d173b]/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#7f1d1d] via-[#7f1d1d]/50 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
                       <div className="flex items-center gap-2 sm:gap-4 text-sm sm:text-base mb-2 sm:mb-4">
                         <span className="px-2 sm:px-3 py-1 bg-white/20 rounded-full uppercase font-medium tracking-wide">
@@ -162,7 +162,7 @@ const MediaCoverage = () => {
                 className="bg-white shadow-md w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center hover:scale-110 transition-all"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-[#0d173b]"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-[#7f1d1d]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ const MediaCoverage = () => {
                 className="bg-white shadow-md w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center hover:scale-110 transition-all"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-[#0d173b]"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-[#7f1d1d]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -199,12 +199,12 @@ const MediaCoverage = () => {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg h-full">
               <div className="flex items-center justify-between mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0d173b]">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#7f1d1d]">
                   Latest Updates
                 </h3>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d173b]/5">
-                  <span className="w-2 h-2 rounded-full bg-[#0d173b] animate-pulse"></span>
-                  <span className="text-xs font-medium text-[#0d173b]">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#7f1d1d]/5">
+                  <span className="w-2 h-2 rounded-full bg-[#7f1d1d] animate-pulse"></span>
+                  <span className="text-xs font-medium text-[#7f1d1d]">
                     Live
                   </span>
                 </div>
@@ -215,7 +215,7 @@ const MediaCoverage = () => {
                     key={item.id}
                     className={`p-4 rounded-xl transition-all duration-300 cursor-pointer ${
                       activeSlide === index
-                        ? "bg-[#0d173b] text-white"
+                        ? "bg-[#7f1d1d] text-white"
                         : "bg-gray-50 hover:bg-gray-100"
                     }`}
                     onClick={() => handleSideItemClick(index)}
@@ -232,7 +232,7 @@ const MediaCoverage = () => {
                             className={`px-2 py-1 rounded-full ${
                               activeSlide === index
                                 ? "bg-white/20 text-white"
-                                : "bg-[#0d173b]/10 text-[#0d173b]"
+                                : "bg-[#7f1d1d]/10 text-[#7f1d1d]"
                             }`}
                           >
                             {item.category}
@@ -251,7 +251,7 @@ const MediaCoverage = () => {
                           className={`font-semibold text-sm sm:text-base line-clamp-2 ${
                             activeSlide === index
                               ? "text-white"
-                              : "text-[#0d173b]"
+                              : "text-[#7f1d1d]"
                           }`}
                         >
                           {item.title}

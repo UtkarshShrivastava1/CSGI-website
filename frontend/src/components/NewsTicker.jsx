@@ -1,71 +1,76 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
 
-// Add custom styles for the news ticker
 const customStyles = `
-  .news-ticker {
-    width: 100%;
-    height: auto;
-  }
-
-  .news-ticker .swiper-slide {
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    .news-ticker .swiper-slide {
-      padding: 0.25rem 1rem;
-      min-height: 3rem;
+  @keyframes tickerScroll {
+    0% {
+      transform: translateX(0);
     }
-    
-    .news-ticker p {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ticker-container {
+    width: 100%;
+    height: 32px; /* Decreased from 40px */
+    overflow: hidden;
+    position: relative;
+    background: #7f1d1d;  /* Changed from #0d173b to #7f1d1d */
+  }
+
+  .ticker-wrapper {
+    display: flex;
+    width: max-content;
+    animation: tickerScroll 30s linear infinite;
+    gap: 2rem;
+  }
+
+  .ticker-wrapper:hover {
+    animation-play-state: paused;
+  }
+
+  @media (min-width: 768px) {
+    .ticker-container {
+      height: 35px; /* Decreased from 48px */
     }
   }
 `;
 
 const NewsTicker = () => {
+  const newsItems = [
+    "Admissions Open for Session 2025-26",
+    "We are now accepting applications for our distinguished Engineering and Pharmacy programs",
+    "Join an institution renowned for academic excellence, cutting-edge research, and state-of-the-art facilities",
+  ];
+
+  // Double the items array to ensure seamless loop
+  const duplicatedItems = [...newsItems, ...newsItems];
+
   return (
-    <div className="bg-red-800 text-white overflow-hidden">
+    <div className="bg-[#7f1d1d] text-white">
       <style>{customStyles}</style>
-      <Swiper
-        spaceBetween={0}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          speed: 1000,
-        }}
-        loop={true}
-        modules={[Autoplay]}
-        className="news-ticker"
-      >
-        <SwiperSlide>
-          <p className="text-center px-4 md:px-0">
-            Admissions Open for Session 2025-26
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="text-center px-4 md:px-0">
-            We are now accepting applications for our distinguished Engineering
-            and Pharmacy programs.{" "}
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <p className="text-center px-4 md:px-0 text-sm md:text-base">
-            Join an institution renowned for academic excellence, cutting-edge
-            research, and state-of-the-art facilities. Join us on a journey to
-            professional success and innovation
-          </p>
-        </SwiperSlide>
-      </Swiper>
+      <div className="ticker-container">
+        <div className="ticker-wrapper flex items-center text-sm md:text-base">
+          {/* First copy of items */}
+          {duplicatedItems.map((item, index) => (
+            <span
+              key={`first-${index}`}
+              className="px-7 whitespace-nowrap after:content-[''] after:ml-4 after:opacity-50"
+            >
+              {item}
+            </span>
+          ))}
+          {/* Second copy for seamless loop */}
+          {duplicatedItems.map((item, index) => (
+            <span
+              key={`second-${index}`}
+              className="px-7 whitespace-nowrap after:content-[''] after:ml-4 after:opacity-50"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

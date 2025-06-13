@@ -6,6 +6,10 @@ import csitBanner2 from "../assets/csitbanner2.jpg";
 import csitBanner3 from "../assets/csitbanner3.jpg";
 import csitBanner4 from "../assets/csitbanner.jpg";
 
+import BannerPhone from "../assets/BannerPhone.png";
+import BannerPhone2 from "../assets/BannerPhone2.png";
+import BannerPhone3 from "../assets/BannerPhone3.png";
+import BannerPhone4 from "../assets/BannerPhone4.png";
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,24 +17,32 @@ import "swiper/css/navigation";
 
 // Custom CSS for arrows and mobile responsiveness
 const customStyles = `
+  /* Base styles */
+  .hero-swiper {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+  }
+
+  /* Navigation buttons - arrows only */
   .hero-swiper .swiper-button-next,
   .hero-swiper .swiper-button-prev {
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: #0d173b;
+    width: 30px;
+    height: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    background: none;
     font-weight: bold;
   }
 
   .hero-swiper .swiper-button-next:hover,
   .hero-swiper .swiper-button-prev:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .hero-swiper .swiper-button-next:after,
   .hero-swiper .swiper-button-prev:after {
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;
   }
 
   .hero-swiper .swiper-pagination-bullet {
@@ -42,40 +54,85 @@ const customStyles = `
     background-color: #0d173b;
   }
 
-  /* Updated mobile styles */
+  /* Mobile styles */
   @media (max-width: 768px) {
     .hero-swiper {
-      height: auto !important;
-      max-height: 50vh;
+      height: 45vh !important; /* Reduced from 60vh to 45vh */
+      width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 0 !important;
     }
     
     .hero-swiper .swiper-slide {
-      height: auto;
+      height: 45vh; /* Reduced from 60vh to 45vh */
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
 
     .hero-swiper img {
-      object-fit: contain !important;
-      width: 100% !important;
-      max-height: 50vh !important;
+      width: 100vw !important;
+      height: 45vh !important; /* Reduced from 60vh to 45vh */
+      object-fit: contain !important; /* Changed from cover to contain */
+      object-position: center !important;
       margin: 0 !important;
       padding: 0 !important;
+      vertical-align: bottom !important;
+    }
+
+    /* Adjust navigation position for mobile */
+    .hero-swiper .swiper-button-next,
+    .hero-swiper .swiper-button-prev {
+      transform: translateY(-50%) scale(0.8);
+      width: 25px;
+      height: 25px;
+    }
+
+    .hero-swiper .swiper-button-next:after,
+    .hero-swiper .swiper-button-prev:after {
+      font-size: 20px;
+    }
+
+    .hero-swiper .swiper-pagination {
+      bottom: 5px !important;
     }
   }
 `;
 
 const Hero = () => {
-  const slides = [
+  const desktopSlides = [
     { image: csitBanner, alt: "College Campus Banner 1" },
     { image: csitBanner2, alt: "College Campus Banner 2" },
     { image: csitBanner3, alt: "College Campus Banner 3" },
     { image: csitBanner4, alt: "College Campus Banner 4" },
   ];
 
+  const mobileSlides = [
+    { image: BannerPhone, alt: "College Campus Mobile Banner 1" },
+    { image: BannerPhone2, alt: "College Campus Mobile Banner 2" },
+    { image: BannerPhone4, alt: "College Campus Mobile Banner 4" },
+  ];
+
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const slides = isMobile ? mobileSlides : desktopSlides;
+
   return (
-    <div className="w-full bg-white overflow-hidden">
+    <div className="w-screen overflow-hidden p-0 m-0 leading-[0px]">
       <style>{customStyles}</style>
       <Swiper
         spaceBetween={0}
@@ -91,11 +148,11 @@ const Hero = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full">
+            <div className="w-full h-full m-0 p-0 leading-[0px]">
               <img
                 src={slide.image}
                 alt={slide.alt}
-                className="w-full object-contain md:object-cover md:max-h-[80vh]"
+                className="w-full h-full object-contain md:object-cover m-0 p-0 align-bottom"
               />
             </div>
           </SwiperSlide>
