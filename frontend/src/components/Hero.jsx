@@ -1,10 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import csitBanner from "../assets/csitbanner.jpg";
-import csitBanner2 from "../assets/csitbanner2.jpg";
-import csitBanner3 from "../assets/csitbanner3.jpg";
-import csitBanner4 from "../assets/csitbanner.jpg";
+import csitBanner from "../assets/Banners/PC/csitbanner.jpg";
+import csitBanner2 from "../assets/Banners/PC/csitbanner2.jpg";
+import csitBanner3 from "../assets/Banners/PC/csitbanner3.jpg";
+import csitBanner4 from "../assets/Banners/PC/csitbanner4.jpg";
+import csitBanner5 from "../assets/Banners/PC/csitbanner5.jpg";
 
 import BannerPhone from "../assets/BannerPhone.png";
 import BannerPhone2 from "../assets/BannerPhone2.png";
@@ -110,6 +111,7 @@ const Hero = () => {
     { image: csitBanner2, alt: "College Campus Banner 2" },
     { image: csitBanner3, alt: "College Campus Banner 3" },
     { image: csitBanner4, alt: "College Campus Banner 4" },
+    { image: csitBanner5, alt: "College Campus Banner 4" },
   ];
 
   const mobileSlides = [
