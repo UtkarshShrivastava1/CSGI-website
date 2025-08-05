@@ -101,7 +101,7 @@ const MediaCoverage = () => {
           <h2 className="text-3xl sm:text-5xl font-bold text-[#7f1d1d] mb-4">
             Media Coverage
           </h2>
-          <div className="w-16 sm:w-24 h-1 bg-[#7f1d1d] mx-auto rounded-full"></div>
+          <div className="w-16 sm:w-24 h-1 bg-[#2b2424] mx-auto rounded-full"></div>
           <p className="text-gray-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed mt-6">
             Discover our institution's journey through media highlights and
             achievements
@@ -136,7 +136,7 @@ const MediaCoverage = () => {
                       className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105"
                       style={{ backgroundImage: `url('${item.image}')` }}
                     ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#7f1d1d] via-[#7f1d1d]/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#3f3f41] via-[#0d173b]/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
                       <div className="flex items-center gap-2 sm:gap-4 text-sm sm:text-base mb-2 sm:mb-4">
                         <span className="px-2 sm:px-3 py-1 bg-white/20 rounded-full uppercase font-medium tracking-wide">

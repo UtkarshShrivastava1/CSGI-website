@@ -47,7 +47,7 @@ const NewsTicker = () => {
   const duplicatedItems = [...newsItems, ...newsItems];
 
   return (
-    <div className="bg-[#7f1d1d] text-white">
+    <div className="bg-[#0f0d0d] text-white">
       <style>{customStyles}</style>
       <div className="ticker-container">
         <div className="ticker-wrapper flex items-center text-sm md:text-base">
