@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import csitBanner from "../assets/Banners/PC/csitbanner.jpg";
-import csitBanner2 from "../assets/Banners/PC/csitbanner2.jpg";
-import csitBanner3 from "../assets/Banners/PC/csitbanner3.jpg";
-import csitBanner4 from "../assets/Banners/PC/csitbanner4.jpg";
-import csitBanner5 from "../assets/Banners/PC/csitbanner5.jpg";
+import csitBanner from "../assets/Banners/PC/csitbannerA.jpg";
+import csitBanner2 from "../assets/Banners/PC/csitbannerB.jpg";
+import csitBanner3 from "../assets/Banners/PC/csitbannerC.jpg";
+import csitBanner4 from "../assets/Banners/PC/csitbannerD.jpg";
+import csitBanner5 from "../assets/Banners/PC/csitbannerE.jpg";
 
 import BannerPhone from "../assets/Banners/Phone/BannerPhone.jpg";
 import BannerPhone2 from "../assets/Banners/Phone/BannerPhone2.jpg";
