@@ -12,6 +12,12 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
+// Import gallery images
+import GalleryImage1 from "../assets/GallerySection/Gallery1.jpg";
+import GalleryImage2 from "../assets/GallerySection/Gallery2.jpg";
+import GalleryImage3 from "../assets/GallerySection/Gallery3.jpg";
+import GalleryImage4 from "../assets/GallerySection/Gallery4.jpg";
+
 const GallerySection = () => {
   const [activeImage, setActiveImage] = useState(null);
   const swiperRef = useRef(null);
@@ -19,7 +25,7 @@ const GallerySection = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://csitdurg.in/admin/uploads/gallery/94eda6a832079a0340f82964287594f7.jpg",
+      src: GalleryImage1,
       alt: "Photo Gallery 1",
       title: "Campus Event",
       description:
@@ -27,21 +33,21 @@ const GallerySection = () => {
     },
     {
       id: 2,
-      src: "https://csitdurg.in/admin/uploads/gallery/643202aefe68f69aa9e2be9fb896c308.jpg",
+      src: GalleryImage2,
       alt: "Photo Gallery 2",
       title: "Student Activities",
       description: "Collaborative learning and group projects",
     },
     {
       id: 3,
-      src: "https://csitdurg.in/admin/uploads/gallery/6c3d24fd3edabb16b5cf7acf499dd6d7.jpg",
+      src: GalleryImage3,
       alt: "Photo Gallery 3",
       title: "Technical Workshop",
       description: "Hands-on training sessions with industry experts",
     },
     {
       id: 4,
-      src: "https://csitdurg.in/admin/uploads/gallery/5e20e1bcfb7b6549233347220fa227f9.jpg",
+      src: GalleryImage4,
       alt: "Photo Gallery 4",
       title: "Cultural Program",
       description: "Annual cultural fest performances and celebrations",

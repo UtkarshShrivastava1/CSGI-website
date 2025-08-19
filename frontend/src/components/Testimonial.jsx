@@ -8,34 +8,70 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
+// Import testimonial images
+import Testimonials1 from "../assets/Testimonials/CSGI/ID-1.jpeg";
+import Testimonials2 from "../assets/Testimonials/CSGI/ID-2.jpeg";
+import Testimonials3 from "../assets/Testimonials/CSGI/ID-3.jpeg";
+import Testimonials4 from "../assets/Testimonials/CSGI/ID-4.jpeg";
+import Testimonials5 from "../assets/Testimonials/CSGI/ID-5.jpeg";
+import Testimonials6 from "../assets/Testimonials/CSGI/ID-6.jpeg";
+
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "The best decision I made was joining this college!",
+      quote: "Where Guidance and Innovation Shape Future Pharmacists",
       description:
-        "With top-notch faculty and state-of-the-art infrastructure, my learning journey has been phenomenal.",
-      name: "Student A",
-      program: "Computer Science",
+        "With supportive faculty, modern infrastructure, and advanced labs, every lecture at this institute brought me closer to professional excellence—I highly recommend it to aspiring pharmacists.",
+      name: "Seema Deshmukh",
+      program: "D.Pharmacy",
       rating: 5,
-      image: "https://pngimg.com/uploads/student/student_PNG100.png",
+      image: Testimonials1,
     },
     {
-      quote: "Excellent faculty and amazing infrastructure.",
+      quote: "Grateful for the Strong Foundation and Values from CSIT",
       description:
-        "The practical exposure and industry visits have equipped me with the skills I need for my career.",
-      name: "Student B",
-      program: "Mechanical Engineering",
+        "CSIT gave me a strong foundation, dedicated faculty support, and invaluable experiences that shaped both my academic and professional journey.",
+      name: "Aniket Nikose",
+      program: "Electrical and Electronics Engineering",
       rating: 5,
-      image: "https://pngimg.com/uploads/student/student_PNG8.png",
+      image: Testimonials2,
     },
     {
-      quote: "A vibrant campus life with endless opportunities.",
+      quote:
+        "From CSE Foundation to Senior Functional Consultant at O9 Solutions",
       description:
-        "Participating in various clubs and events has enhanced my leadership and networking skills.",
-      name: "Student C",
-      program: "Business Administration",
+        "A strong CSE foundation and passion for problem-solving led me to become a Senior Functional Consultant – Delivery at O9 Solutions.",
+      name: "JASPREET SINGH BHATIA",
+      program: "Computer Science and Engineering",
       rating: 5,
-      image: "https://pngimg.com/uploads/student/student_PNG30.png",
+      image: Testimonials3,
+    },
+    {
+      quote: "Opportunities, Friendship, and Guidance at CSIT",
+      description:
+        "CSIT offers abundant academic opportunities, supportive friends, knowledgeable faculty, and even great canteen food at affordable prices.",
+      name: "Saniya ansari",
+      program: "B.Pharmacy",
+      rating: 5,
+      image: Testimonials4,
+    },
+    {
+      quote: "Transforming Students into Confident Pharmacy Professionals",
+      description:
+        "This pharmacy institute transformed my journey with expert faculty, modern labs, and real-world training, preparing me confidently for my career.",
+      name: "Tushendra Kumar Deshmukh",
+      program: "B.Pharmacy",
+      rating: 5,
+      image: Testimonials5,
+    },
+    {
+      quote: "A Transformative Journey of Learning and Lifelong Memories",
+      description:
+        "My college journey was transformative, with supportive faculty, vibrant campus life, and lasting friendships that enriched me academically, personally, and socially.",
+      name: "Minakshi Bind",
+      program: "B.Pharmacy",
+      rating: 5,
+      image: Testimonials6,
     },
   ];
 

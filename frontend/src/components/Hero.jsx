@@ -10,6 +10,8 @@ import csitBanner5 from "../assets/Banners/PC/csitbannerE.jpg";
 import BannerPhone from "../assets/Banners/Phone/BannerPhone.jpg";
 import BannerPhone2 from "../assets/Banners/Phone/BannerPhone2.jpg";
 import BannerPhone3 from "../assets/Banners/Phone/BannerPhone3.jpg";
+import BannerPhone4 from "../assets/Banners/Phone/BannerPhone4.jpg";
+
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -116,7 +118,8 @@ const Hero = () => {
   const mobileSlides = [
     { image: BannerPhone, alt: "College Campus Mobile Banner 1" },
     { image: BannerPhone2, alt: "College Campus Mobile Banner 2" },
-    { image: BannerPhone3, alt: "College Campus Mobile Banner 4" },
+    { image: BannerPhone3, alt: "College Campus Mobile Banner 3" },
+    { image: BannerPhone4, alt: "College Campus Mobile Banner 4" },
   ];
 
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);

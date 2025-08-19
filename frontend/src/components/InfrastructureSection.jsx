@@ -7,20 +7,49 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+// Import infrastructure images
+import Infrastructure1 from "../assets/InfrastructureSection/Infrastructure1.jpg";
+import Infrastructure2 from "../assets/InfrastructureSection/Infrastructure2.jpg";
+import Infrastructure3 from "../assets/InfrastructureSection/Infrastructure3.jpg";
+import Infrastructure4 from "../assets/InfrastructureSection/Infrastructure4.jpg";
+
 const InfrastructureSection = () => {
+  // Define infrastructure image data
+  const leftSliderImages = [
+    {
+      src: Infrastructure1,
+      alt: "Campus Building",
+    },
+    {
+      src: Infrastructure2,
+      alt: "Computer Lab",
+    },
+  ];
+
+  const rightSliderImages = [
+    {
+      src: Infrastructure3,
+      alt: "Library",
+    },
+    {
+      src: Infrastructure4,
+      alt: "Sports Ground",
+    },
+  ];
+
   return (
     <section className="bg-gray-100 py-20">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#7f1d1d]">
-            Our <span className="text-[#7f1d1d]">Infrastructure</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#7f1d1d] mb-10 md:mb-12">
+            Our Infrastructure
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
             Discover our state-of-the-art campus, designed to foster innovation
             and creativity.
           </p>
-          <div className="w-16 h-1 bg-[#7f1d1d] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#2c7ff4] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Image Grid */}
@@ -40,20 +69,15 @@ const InfrastructureSection = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="rounded-2xl overflow-hidden shadow-lg border border-gray-200"
             >
-              <SwiperSlide>
-                <img
-                  src="https://csitdurg.in/admin/uploads/gallery/014b3f5676f89fa6d8aa5f45e06fabdb.jpg"
-                  alt="Infrastructure 1"
-                  className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://csitdurg.in/admin/uploads/gallery/90504c70957c87d4c3b75f85f24e7bcf.jpg"
-                  alt="Infrastructure 2"
-                  className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </SwiperSlide>
+              {leftSliderImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
 
@@ -72,20 +96,15 @@ const InfrastructureSection = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="rounded-2xl overflow-hidden shadow-lg border border-gray-200"
             >
-              <SwiperSlide>
-                <img
-                  src="https://csitdurg.in/admin/uploads/gallery/59a90dd20e3be9628132249ff4a3046d.jpg"
-                  alt="Activity 1"
-                  className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://csitdurg.in/admin/uploads/gallery/454f2a205a8fd1f568ec9e92d294b217.jpg"
-                  alt="Activity 2"
-                  className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </SwiperSlide>
+              {rightSliderImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

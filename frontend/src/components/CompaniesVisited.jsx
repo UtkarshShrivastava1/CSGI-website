@@ -1,5 +1,10 @@
 import { useEffect, useRef } from "react";
 
+import Wipro from "../assets/CompaniesVisited/Wipro.png";
+import Accenture from "../assets/CompaniesVisited/Accenture.png";
+import Infosys from "../assets/CompaniesVisited/Infosys.png";
+import TataTechnologies from "../assets/CompaniesVisited/TataTechnologies.png";
+
 const CompaniesVisited = () => {
   // References for both logo containers
   const containerRef = useRef(null);
@@ -10,35 +15,35 @@ const CompaniesVisited = () => {
   const companies = [
     {
       name: "Wipro",
-      logo: "https://csitdurg.in/Photos/Company-logo/Wipro_Primary_Logo_Color_RGB.svg%20(1).png",
+      logo: Wipro,
     },
     {
       name: "Accenture",
-      logo: "https://csitdurg.in/Photos/Company-logo/Accenture-logo.png",
+      logo: Accenture,
     },
     {
       name: "Infosys",
-      logo: "https://csitdurg.in/Photos/Company-logo/download-removebg-preview.png",
+      logo: Infosys,
     },
     {
       name: "Tata Technologies",
-      logo: "https://csitdurg.in/Photos/Company-logo/TATA+TECHNOLOGIES.png",
+      logo: TataTechnologies,
     },
     {
       name: "Wipro",
-      logo: "https://csitdurg.in/Photos/Company-logo/Wipro_Primary_Logo_Color_RGB.svg%20(1).png",
+      logo: Wipro,
     },
     {
       name: "Accenture",
-      logo: "https://csitdurg.in/Photos/Company-logo/Accenture-logo.png",
+      logo: Accenture,
     },
     {
       name: "Infosys",
-      logo: "https://csitdurg.in/Photos/Company-logo/download-removebg-preview.png",
+      logo: Infosys,
     },
     {
       name: "Tata Technologies",
-      logo: "https://csitdurg.in/Photos/Company-logo/TATA+TECHNOLOGIES.png",
+      logo: TataTechnologies,
     },
   ];
 
@@ -76,7 +81,7 @@ const CompaniesVisited = () => {
   return (
     <div className="bg-white py-16 text-[#7f1d1d]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#7f1d1d] mb-10 md:mb-12">
           Companies Visited
         </h2>
         <div className="h-1 w-24 bg-[#7f1d1d] mx-auto mb-8"></div>

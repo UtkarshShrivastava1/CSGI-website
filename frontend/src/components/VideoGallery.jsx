@@ -11,7 +11,8 @@ import {
   Clock,
   Calendar,
 } from "lucide-react";
-
+import Local_csit_video from "../assets/VideoGallery/Local_csit_video.mp4";
+import Local_Poster from "../assets/VideoGallery/Local_Poster.jpg";
 const getYoutubeThumbnail = (url) => {
   const videoId = url.split("embed/")[1]?.split("?")[0];
   return videoId
@@ -22,9 +23,8 @@ const getYoutubeThumbnail = (url) => {
 const videos = [
   {
     type: "local",
-    src: "https://csitdurg.in/Photos/csit_video.mp4",
-    poster:
-      "https://csitdurg.in/admin/uploads/gallery/94eda6a832079a0340f82964287594f7.jpg",
+    src: Local_csit_video,
+    poster: Local_Poster,
     title: "Campus Tour",
     duration: "3:24",
     date: "April 15, 2025",
@@ -63,9 +63,8 @@ const videos = [
   },
   {
     type: "local",
-    src: "https://csitdurg.in/Photos/csit_video.mp4",
-    poster:
-      "https://csitdurg.in/admin/uploads/gallery/94eda6a832079a0340f82964287594f7.jpg",
+    src: Local_csit_video,
+    poster: Local_Poster,
     title: "Annual Festival",
     duration: "7:45",
     date: "February 8, 2025",

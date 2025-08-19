@@ -89,9 +89,9 @@ const AboutSection = () => {
                   <FiBook className="text-3xl text-white transition-all duration-500 group-hover:animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-[#7f1d1d] mb-3 transition-all duration-300 group-hover:translate-x-2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-center text-[#7f1d1d] mb-10 md:mb-12">
                     About CSGI
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 leading-relaxed transition-all duration-500 group-hover:text-gray-800">
                     Established in 1999, CSIT stands as a beacon of excellence
                     in technical education. Recognized as Chhattisgarh's premier
