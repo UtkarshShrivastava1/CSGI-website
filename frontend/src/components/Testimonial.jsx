@@ -10,7 +10,6 @@ import "swiper/css/effect-coverflow";
 
 // Import testimonial images
 import Testimonials1 from "../assets/Testimonials/CSGI/ID-1.jpeg";
-import Testimonials2 from "../assets/Testimonials/CSGI/ID-2.jpeg";
 import Testimonials3 from "../assets/Testimonials/CSGI/ID-3.jpeg";
 import Testimonials4 from "../assets/Testimonials/CSGI/ID-4.jpeg";
 import Testimonials5 from "../assets/Testimonials/CSGI/ID-5.jpeg";
@@ -27,15 +26,7 @@ const Testimonials = () => {
       rating: 5,
       image: Testimonials1,
     },
-    {
-      quote: "Grateful for the Strong Foundation and Values from CSIT",
-      description:
-        "CSIT gave me a strong foundation, dedicated faculty support, and invaluable experiences that shaped both my academic and professional journey.",
-      name: "Aniket Nikose",
-      program: "Electrical and Electronics Engineering",
-      rating: 5,
-      image: Testimonials2,
-    },
+
     {
       quote:
         "From CSE Foundation to Senior Functional Consultant at O9 Solutions",
@@ -78,11 +69,11 @@ const Testimonials = () => {
   // Star rating component
   const StarRating = ({ rating }) => {
     return (
-      <div className="flex space-x-1">
+      <div className="flex justify-center sm:justify-start space-x-1">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
-            size={14}
+            size={12}
             className={`${
               i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
             }`}
@@ -93,35 +84,25 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white py-14 relative overflow-hidden">
+    <div className="bg-white py-8 sm:py-12 lg:py-14 relative overflow-hidden">
       {/* Subtle background shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-10">
-        <div className="absolute top-5 left-5 w-32 h-32 rounded-full bg-blue-400 mix-blend-multiply filter blur-lg"></div>
-        <div className="absolute bottom-5 right-10 w-40 h-40 rounded-full bg-indigo-300 mix-blend-multiply filter blur-lg"></div>
+        <div className="absolute top-5 left-5 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-blue-400 mix-blend-multiply filter blur-lg"></div>
+        <div className="absolute bottom-5 right-10 w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-indigo-300 mix-blend-multiply filter blur-lg"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Compact header */}
-        {/* <div className="text-center mb-10">
-          <span className="inline-block px-3 py-1 bg-[#0d173b] bg-opacity-10 rounded-full text-[#0d173b] font-medium text-xs mb-3">STUDENT VOICES</span>
-          <h2 className="text-3xl font-bold text-[#0d173b] mb-2">Testimonials</h2>
-          <div className="flex items-center justify-center mb-3">
-            <div className="h-1 w-8 bg-[#0d173b] opacity-30 rounded-full"></div>
-            <div className="h-1 w-14 bg-[#0d173b] mx-1 rounded-full"></div>
-            <div className="h-1 w-8 bg-[#0d173b] opacity-30 rounded-full"></div>
-          </div>
-        </div> */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header section */}
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-[#7f1d1d] mb-2">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#7f1d1d] mb-2 sm:mb-3">
             Students Testimonials
           </h2>
           <div className="flex items-center justify-center mb-3">
-            <div className="h-1 w-8 bg-[#7f1d1d] opacity-30 rounded-full"></div>
-            <div className="h-1 w-14 bg-[#7f1d1d] mx-1 rounded-full"></div>
-            <div className="h-1 w-8 bg-[#7f1d1d] opacity-30 rounded-full"></div>
+            <div className="h-1 w-6 sm:w-8 bg-[#7f1d1d] opacity-30 rounded-full"></div>
+            <div className="h-1 w-10 sm:w-14 bg-[#7f1d1d] mx-1 rounded-full"></div>
+            <div className="h-1 w-6 sm:w-8 bg-[#7f1d1d] opacity-30 rounded-full"></div>
           </div>
-          <p className="text-slate-600 text-sm max-w-md mx-auto">
+          <p className="text-slate-600 text-xs sm:text-sm max-w-md mx-auto px-4">
             What our students say about their experiences
           </p>
         </div>
@@ -130,36 +111,98 @@ const Testimonials = () => {
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={"auto"}
+          slidesPerView={1}
+          spaceBetween={20}
+          loop={true}
           coverflowEffect={{
-            rotate: 5,
+            rotate: 0,
             stretch: 0,
             depth: 100,
-            modifier: 2,
+            modifier: 1.5,
             slideShadows: false,
           }}
           autoplay={{
-            delay: 5000,
+            delay: 4500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           pagination={{
             clickable: true,
             dynamicBullets: true,
           }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.1,
+              spaceBetween: 25,
+            },
+            768: {
+              slidesPerView: 1.3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 1.5,
+              spaceBetween: 35,
+            },
+            1280: {
+              slidesPerView: 1.8,
+              spaceBetween: 40,
+            },
+          }}
           modules={[Autoplay, Pagination, EffectCoverflow]}
-          className="testimonial-swiper"
+          className="testimonial-swiper pb-12"
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide
-              key={index}
-              className="py-6 px-2"
-              style={{ width: "70%", maxWidth: "650px" }}
-            >
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl group">
-                <div className="flex flex-col md:flex-row">
-                  {/* Left column with image background - made narrower */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-[#7f1d1d] to-red-900 p-4 relative flex flex-col items-center justify-center text-center">
-                    <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-white border-opacity-20 shadow-lg mb-3 group-hover:scale-105 transition-transform duration-300">
+            <SwiperSlide key={index} className="py-4 sm:py-6 px-2">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl group max-w-2xl mx-auto">
+                {/* Mobile Layout */}
+                <div className="block sm:hidden">
+                  {/* Mobile Header */}
+                  <div className="bg-gradient-to-br from-[#7f1d1d] to-red-900 p-6 text-center">
+                    <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-white border-opacity-20 shadow-lg mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-white text-lg font-bold mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <div className="flex items-center justify-center gap-2 text-red-200 mb-2">
+                      <GraduationCap
+                        size={12}
+                        className="opacity-70 flex-shrink-0"
+                      />
+                      <p className="text-xs leading-tight">
+                        {testimonial.program}
+                      </p>
+                    </div>
+                    <StarRating rating={testimonial.rating} />
+                  </div>
+
+                  {/* Mobile Content */}
+                  <div className="p-5">
+                    <div className="mb-3">
+                      <Quote
+                        size={20}
+                        className="text-[#7f1d1d] opacity-20 mx-auto"
+                      />
+                    </div>
+                    <p className="text-base sm:text-lg font-medium mb-3 text-[#7f1d1d] leading-snug text-center">
+                      "{testimonial.quote}"
+                    </p>
+                    <p className="text-sm text-slate-600 leading-relaxed text-center">
+                      {testimonial.description}
+                    </p>
+                    <div className="h-1 w-10 bg-[#7f1d1d] rounded-full opacity-30 mx-auto mt-4"></div>
+                  </div>
+                </div>
+
+                {/* Desktop/Tablet Layout */}
+                <div className="hidden sm:flex">
+                  {/* Left column with image background */}
+                  <div className="w-1/3 bg-gradient-to-br from-[#7f1d1d] to-red-900 p-4 lg:p-5 relative flex flex-col items-center justify-center text-center">
+                    <div className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border-2 border-white border-opacity-20 shadow-lg mb-3 group-hover:scale-105 transition-transform duration-300">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -167,26 +210,29 @@ const Testimonials = () => {
                       />
                     </div>
 
-                    <h3 className="text-white text-sm font-bold mb-1">
+                    <h3 className="text-white text-sm lg:text-base font-bold mb-1">
                       {testimonial.name}
                     </h3>
-                    <div className="flex items-center justify-center gap-1 text-blue-200 mb-2">
-                      <GraduationCap size={12} className="opacity-70" />
-                      <p className="text-xs">{testimonial.program}</p>
+                    <div className="flex items-center justify-center gap-1 text-red-200 mb-2">
+                      <GraduationCap
+                        size={12}
+                        className="opacity-70 flex-shrink-0"
+                      />
+                      <p className="text-xs leading-tight">
+                        {testimonial.program}
+                      </p>
                     </div>
 
-                    <div className="mt-2">
-                      <StarRating rating={testimonial.rating} />
-                    </div>
+                    <StarRating rating={testimonial.rating} />
                   </div>
 
                   {/* Right column with testimonial content */}
-                  <div className="md:w-2/3 p-5 flex flex-col justify-center">
+                  <div className="w-2/3 p-4 lg:p-5 flex flex-col justify-center">
                     <div className="mb-3">
-                      <Quote size={24} className="text-[#7f1d1d] opacity-20" />
+                      <Quote size={20} className="text-[#7f1d1d] opacity-20" />
                     </div>
 
-                    <p className="text-lg font-medium mb-3 text-[#7f1d1d] leading-snug">
+                    <p className="text-base lg:text-lg font-medium mb-3 text-[#7f1d1d] leading-snug">
                       "{testimonial.quote}"
                     </p>
 
@@ -194,7 +240,7 @@ const Testimonials = () => {
                       {testimonial.description}
                     </p>
 
-                    <div className="h-1 w-12 bg-[#7f1d1d] rounded-full opacity-30"></div>
+                    <div className="h-1 w-10 lg:w-12 bg-[#7f1d1d] rounded-full opacity-30"></div>
                   </div>
                 </div>
               </div>
@@ -202,16 +248,44 @@ const Testimonials = () => {
           ))}
         </Swiper>
 
-        <div className="flex justify-center mt-8">
-          <div className="px-4 py-1 bg-white shadow-md rounded-full flex items-center gap-1">
+        {/* Bottom Statistics */}
+        <div className="flex justify-center mt-6 sm:mt-8">
+          <div className="px-3 sm:px-4 py-2 bg-white shadow-md rounded-full flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-            <p className="text-xs text-gray-600">
+            <p className="text-xs sm:text-sm text-gray-600">
               <span className="font-medium text-[#7f1d1d]">100+</span> student
               testimonials
             </p>
           </div>
         </div>
       </div>
+
+      {/* Custom Styles */}
+      <style jsx>{`
+        .testimonial-swiper .swiper-pagination {
+          bottom: 0 !important;
+        }
+
+        .testimonial-swiper .swiper-pagination-bullet {
+          background: #7f1d1d;
+          opacity: 0.3;
+          width: 8px;
+          height: 8px;
+        }
+
+        .testimonial-swiper .swiper-pagination-bullet-active {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+
+        @media (max-width: 640px) {
+          .testimonial-swiper .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            margin: 0 3px;
+          }
+        }
+      `}</style>
     </div>
   );
 };
